@@ -14,7 +14,7 @@ default: &default
   port: <%= ENV["#{db_service}_SERVICE_PORT"] %>
   database: <%= ENV["POSTGRESQL_DATABASE"] %>
 
-dev_default: &default
+dev_default: &dev_default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
